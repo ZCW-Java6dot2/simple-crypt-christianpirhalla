@@ -28,6 +28,7 @@ public class ROT13Test {
         // When
         ROT13 cipher = new ROT13();
         String actual = cipher.rotate(s1, 'D');
+        System.out.println(actual);
 
         // Then
         assertTrue(actual.equals(s2));
