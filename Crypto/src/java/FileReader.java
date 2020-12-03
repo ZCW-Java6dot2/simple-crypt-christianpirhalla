@@ -2,15 +2,15 @@ import java.io.*;
 
 public class FileReader {
 
-    public static void readAndEncryptFile(ROT13 cipher){
+    public static void readAndEncryptFile(ROT13 cipher, String originalFilePath, String newFilePath){
         {
             BufferedReader reader;
-            File fout = new File("sonnet18.enc");
+            File fout = new File(newFilePath);
             BufferedWriter writer;
 
             try {
                 FileOutputStream fos = new FileOutputStream(fout);
-                reader = new BufferedReader(new java.io.FileReader("sonnet18.txt"));
+                reader = new BufferedReader(new java.io.FileReader(originalFilePath));
                 writer = new BufferedWriter(new OutputStreamWriter(fos));
 
                 String line = reader.readLine();
